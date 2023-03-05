@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>LUNG CANCER WEBSITE</title>
+</head>
+
+<body>
+  <section>
+    <div class="UI">
+    </div>
+    <header>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <nav class="navbar">
+        <ul>
+        <img class="logo" src="C:\Users\SOMNATH\Dropbox\My PC (SWAP)\Downloads\rsz_logoimage.png" ALT="align box">
+        <a href="#"><i class="fa fa-sign-out"></i> Sign Out </a>
+        <a href="#"><i class="fa fa-product-hunt"></i> Prediction</a>
+        <a href="#"><i class="fa fa-user-md"></i> Doctor</a>
+        <a href="#"><i class="fa fa-user"></i> Profile</a>
+        <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+        </ul>
+      </nav>
+    </header>  
+    
+    <div class="bg-img">
+    <form action="{{ url_for('predict')}}"method="POST" class="container">
+    <h1>Lung Cancer Prediction</h1>
+    <p>Please Fill in the Required Details :</p><br>
+        
+        <Table Border="0">
+          <TR>
+          <TD>Air Pollution</TD>
+          <TD><Input type="Text" Name="Air Pollution" Placeholder="" Required="Required"></TD>
+          </TR>
+          <TR>
+          <TD>Alcoholuse</TD>
+          <TD><Input type="Text" Name="Alcoholuse" Placeholder="" Required="Required"></TD>
+          </TR>
+          <TR>
+          <TD>Genetic Risk</TD>
+          <TD><Input type="Text" Name="Genetic Risk" Placeholder="" Required="Required"></TD>
+          </TR>
+          <TR>
+          <TD>Balanced Diet</TD>
+          <TD><Input type="Text" Name="Balanced Diet" Placeholder="" Required="Required"></TD>
+          </TR>
+          <TR>
+          <TD>Obesity</TD>
+          <TD><Input type="Text" Name="Obesity" Placeholder="" Required="Required"></TD>
+          </TR>
+          <TR>
+          <TD>Smoking</TD>
+          <TD><Input type="Text" Name="Smoking" Placeholder="" Required="Required"></TD>
+          </TR>
+          <TR>
+          <TD>Passive Smoker</TD>
+          <TD><Input type="Text" Name="Passive Smoker" Placeholder="" Required="Required"></TD>
+          </TR>
+          <TR>
+          <TD>ChestPain</TD>
+          <TD><Input type="Text" Name="ChestPain" Placeholder="" Required="Required"></TD>
+          </TR>
+          <TR>
+          <TD>Coughing of Blood</TD>
+          <TD><Input type="Text" Name="Coughing of Blood" Placeholder="" Required="Required"></TD>
+          </TR>
+          <TR>
+          <TD>Fatigue</TD>
+          <TD><Input type="Text" Name="Fatigue" Placeholder="" Required="Required"></TD>
+          </TR>
+        </Table>
+        
+        <Button type="Submit" Class="btn">Predict</Button>     
+    
+     </form>  
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
+              
+              
+ </div>
+        {{ prediction_text }}
+</body>
+</html>
